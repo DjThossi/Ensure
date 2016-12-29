@@ -1,6 +1,6 @@
 {
     "name": "djthossi/ensure",
-    "description": "Some PHP Traits for ensuring some values",
+    "description": "Some PHP Traits for ensuring values",
     "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
