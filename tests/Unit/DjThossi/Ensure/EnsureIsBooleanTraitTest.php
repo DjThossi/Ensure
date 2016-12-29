@@ -64,6 +64,7 @@ class EnsureIsBooleanTraitTest extends PHPUnit_Framework_TestCase
             'Integer' => ['FieldName', 1337, 3, 'FieldName is not a boolean, got "integer"'],
             'object' => ['FieldName', new stdClass(), 4, 'FieldName is not a boolean, got "stdClass"'],
             'empty' => ['FieldName', '', 5, 'FieldName is not a boolean, got "string"'],
+            'null' => ['FieldName', null, 5, 'FieldName is not a boolean, got "NULL"'],
         ];
     }
 }
