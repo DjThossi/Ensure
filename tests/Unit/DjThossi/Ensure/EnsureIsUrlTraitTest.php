@@ -4,7 +4,6 @@ namespace Unit\DjThossi\Ensure;
 use DjThossi\Ensure\EnsureIsUrlTrait;
 use DjThossi\Ensure\InvalidValueException;
 use PHPUnit_Framework_TestCase;
-use stdClass;
 
 /**
  * @covers \DjThossi\Ensure\EnsureIsUrlTrait
@@ -17,7 +16,7 @@ class EnsureIsUrlTraitTest extends PHPUnit_Framework_TestCase
      * @dataProvider workingValuesProvider
      *
      * @param string $fieldName
-     * @param mixed $value
+     * @param string $value
      */
     public function testEnsureIsWorking($fieldName, $value)
     {
@@ -41,7 +40,7 @@ class EnsureIsUrlTraitTest extends PHPUnit_Framework_TestCase
      * @dataProvider failingValuesProvider
      *
      * @param string $fieldName
-     * @param mixed $value
+     * @param string $value
      * @param int $exceptionCode
      * @param string $expectedMessage
      */
@@ -61,15 +60,11 @@ class EnsureIsUrlTraitTest extends PHPUnit_Framework_TestCase
     {
         return [
             'String' => ['FieldName', 'Hello World', 1, 'FieldName is not a matching url, got "Hello World"'],
-            'Double' => ['FieldName', 1.337, 2, 'FieldName is not a string, got "double"'],
-            'Integer' => ['FieldName', 1337, 3, 'FieldName is not a string, got "integer"'],
-            'object' => ['FieldName', new stdClass(), 4, 'FieldName is not a string, got "stdClass"'],
-            'empty' => ['FieldName', '', 5, 'FieldName is not a matching url, got ""'],
-            'null' => ['FieldName', null, 6, 'FieldName is not a string, got "NULL"'],
+            'empty' => ['FieldName', '', 2, 'FieldName is not a matching url, got ""'],
             'brokenUrl' => [
                 'FieldName',
                 'ttp://www.ex.com',
-                7,
+                3,
                 'FieldName is not a matching url, got "ttp://www.ex.com"',
             ],
         ];
