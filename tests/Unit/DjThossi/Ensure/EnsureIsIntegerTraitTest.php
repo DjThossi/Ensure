@@ -66,8 +66,7 @@ class EnsureIsIntegerTraitTest extends PHPUnit_Framework_TestCase
             'False' => ['FieldName', false, 4, 'FieldName is not an integer, got "boolean"'],
             'object' => ['FieldName', new stdClass(), 5, 'FieldName is not an integer, got "stdClass"'],
             'empty' => ['FieldName', '', 6, 'FieldName is not an integer, got "string"'],
-            'null' => ['FieldName', null, 5, 'FieldName is not an integer, got "NULL"'],
-
+            'null' => ['FieldName', null, 7, 'FieldName is not an integer, got "NULL"'],
         ];
     }
 }

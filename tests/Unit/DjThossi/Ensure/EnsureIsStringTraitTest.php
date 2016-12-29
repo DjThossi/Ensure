@@ -64,7 +64,7 @@ class EnsureIsStringTraitTest extends PHPUnit_Framework_TestCase
             'Double' => ['FieldName', 1.337, 3, 'FieldName is not a string, got "double"'],
             'Integer' => ['FieldName', 1337, 4, 'FieldName is not a string, got "integer"'],
             'object' => ['FieldName', new stdClass(), 5, 'FieldName is not a string, got "stdClass"'],
-            'null' => ['FieldName', null, 5, 'FieldName is not a string, got "NULL"'],
+            'null' => ['FieldName', null, 6, 'FieldName is not a string, got "NULL"'],
         ];
     }
 }
