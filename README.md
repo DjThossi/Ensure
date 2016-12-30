@@ -1,6 +1,7 @@
 # Ensure
 Some PHP Traits for ensuring values
 [![Build Status](https://travis-ci.org/DjThossi/Ensure.svg?branch=master)](https://travis-ci.org/DjThossi/Ensure)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/ccaef76a-725e-4b1b-892a-c3dd4570e629/mini.png)](https://insight.sensiolabs.com/projects/ccaef76a-725e-4b1b-892a-c3dd4570e629)
 
 ## How it works
 The provided Ensure Traits will test if provided `$valueToTest` has expected value. 
