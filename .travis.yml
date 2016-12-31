@@ -9,8 +9,8 @@ php:
 
 cache:
   directories:
-    - $HOME/vendor
-    - $HOME/bin
+    - vendor
+    - bin
 
 before_script: composer install
 
