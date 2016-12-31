@@ -11,12 +11,12 @@ before_script: composer install
 
 script:
   - mkdir -p coverage
-  - php vendor/bin/phpunit
+  - php bin/phpunit
 
 after_script:
   - chmod -R 777 coverage
   - ls -lhart coverage
-  - if [ -f vendor/bin/coveralls ] ; then php vendor/bin/coveralls -vvv || true ; fi
+  - if [ -f bin/coveralls ] ; then php bin/coveralls --config=./.coveralls.yml -vvv || true ; fi
 
 notifications:
   email:
