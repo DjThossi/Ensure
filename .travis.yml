@@ -9,6 +9,10 @@ php:
 
 before_script: composer install
 
+script:
+  - mkdir -p coverage
+  - php bin/phpunit
+
 after_script:
   - if [ -f bin/coveralls ] ; then php bin/coveralls -v || true ; fi
 
