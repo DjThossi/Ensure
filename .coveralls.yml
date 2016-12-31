@@ -1,0 +1,4 @@
+repo_token: hlpmrm1UNVxFr8W6yJ4fPbmRSKHyxCyFX
+service_name: travis_ci
+coverage_clover: coverage/clover.xml
+json_path: coverage/coveralls-upload.json
