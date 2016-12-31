@@ -14,6 +14,7 @@ script:
   - php bin/phpunit
 
 after_script:
+  - ls -lhart coverage
   - if [ -f bin/coveralls ] ; then php bin/coveralls -v || true ; fi
 
 notifications:
