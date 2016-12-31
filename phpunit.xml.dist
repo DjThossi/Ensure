@@ -21,6 +21,7 @@
 
     <logging>
         <log type="coverage-html" target="coverage"/>
+        <log type="coverage-clover" target="coverage/clover.xml"/>
     </logging>
 
     <filter>
