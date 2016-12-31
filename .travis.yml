@@ -15,7 +15,9 @@ script:
 
 after_script:
   - ls -lhart coverage
-  - if [ -f bin/coveralls ] ; then php bin/coveralls -v || true ; fi
+
+after_success:
+  - travis_retry php bin/coveralls
 
 notifications:
   email:
