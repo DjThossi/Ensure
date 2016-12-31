@@ -18,12 +18,14 @@ script:
   - php bin/phpunit
 
 after_success:
-  - export CI_BUILD_NUMBER="$TRAVIS_BUILD_NUMBER"
-  - export CI_PULL_REQUEST="$TRAVIS_PULL_REQUEST"
-  - export CI_BRANCH="$TRAVIS_BRANCH"
-  - travis_retry php bin/coveralls -vvv
+  - composer require codeclimate/php-test-reporter dev-master
+  - bin/test-reporter
 
 notifications:
   email:
     on_success: change
     on_failure: change
+
+addons:
+  code_climate:
+    repo_token: f7ad1bc4bdf2238e43fa34a5e3b4ffe3696c60ead1690e6ef8c821526c12410a
