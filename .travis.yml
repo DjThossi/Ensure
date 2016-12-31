@@ -10,13 +10,10 @@ php:
 before_script: composer install
 
 script:
-  - mkdir -p coverage
   - php bin/phpunit
 
-after_script:
-  - chmod -R 777 coverage
-  - ls -lhart coverage
-  - if [ -f bin/coveralls ] ; then php bin/coveralls --config=./.coveralls.yml -vvv || true ; fi
+after_success:
+  - travis_retry php bin/coveralls -vvv
 
 notifications:
   email:
