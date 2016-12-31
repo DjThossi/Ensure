@@ -1,8 +1,11 @@
 # Ensure
 Some PHP Traits for ensuring values
 [![Build Status](https://travis-ci.org/DjThossi/Ensure.svg?branch=master)](https://travis-ci.org/DjThossi/Ensure)
-[![Coverage Status](https://coveralls.io/repos/github/DjThossi/Ensure/badge.svg?branch=master)](https://coveralls.io/github/DjThossi/Ensure?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ccaef76a-725e-4b1b-892a-c3dd4570e629/mini.png)](https://insight.sensiolabs.com/projects/ccaef76a-725e-4b1b-892a-c3dd4570e629)
+[![Code Climate](https://codeclimate.com/github/DjThossi/Ensure/badges/gpa.svg)](https://codeclimate.com/github/DjThossi/Ensure)
+[![Test Coverage](https://codeclimate.com/github/DjThossi/Ensure/badges/coverage.svg)](https://codeclimate.com/github/DjThossi/Ensure/coverage)
+
+
 ## How it works
 The provided Ensure Traits will test if provided `$valueToTest` has expected value. 
 - If `$valueToTest` is valid nothing happens
