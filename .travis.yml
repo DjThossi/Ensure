@@ -14,10 +14,9 @@ script:
   - php bin/phpunit
 
 after_script:
+  - chmod -r 777 coverage
   - ls -lhart coverage
-
-after_success:
-  - travis_retry php bin/coveralls
+  - if [ -f bin/coveralls ] ; then php bin/coveralls -v || true ; fi
 
 notifications:
   email:
