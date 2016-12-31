@@ -14,7 +14,7 @@ script:
   - php bin/phpunit
 
 after_script:
-  - chmod -r 777 coverage
+  - chmod -R 777 coverage
   - ls -lhart coverage
   - if [ -f bin/coveralls ] ; then php bin/coveralls -v || true ; fi
 
