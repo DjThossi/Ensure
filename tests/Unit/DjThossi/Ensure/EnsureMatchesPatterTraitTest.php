@@ -1,6 +1,7 @@
 <?php
 namespace Unit\DjThossi\Ensure;
 
+use DjThossi\Ensure\EnsureMatchesPatternException;
 use DjThossi\Ensure\EnsureMatchesPatternTrait;
 use DjThossi\Ensure\InvalidValueException;
 use PHPUnit_Framework_TestCase;
@@ -48,7 +49,7 @@ class EnsureMatchesPatterTraitTest extends PHPUnit_Framework_TestCase
      */
     public function testEnsureIsFailing($fieldName, $regex, $value, $exceptionCode, $expectedMessage)
     {
-        $this->expectException(InvalidValueException::class);
+        $this->expectException(EnsureMatchesPatternException::class);
         $this->expectExceptionCode($exceptionCode);
         $this->expectExceptionMessage($expectedMessage);
 

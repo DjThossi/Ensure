@@ -9,13 +9,13 @@ trait EnsureMatchesPatternTrait
      * @param string $valueToTest
      * @param int $exceptionCode
      *
-     * @throws InvalidValueException
+     * @throws EnsureMatchesPatternException
      */
     protected function ensureMatchesPattern($fieldName, $regex, $valueToTest, $exceptionCode = 0)
     {
         if (preg_match($regex, $valueToTest) !== 1) {
             $message = sprintf('%s does not match the regular expression "%s", got "%s"', $fieldName, $regex, $valueToTest);
-            throw new InvalidValueException($message, $exceptionCode);
+            throw new EnsureMatchesPatternException($message, $exceptionCode);
         }
     }
 }
